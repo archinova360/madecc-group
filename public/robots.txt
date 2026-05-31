@@ -1,0 +1,13 @@
+# Robots.txt for MADECC Group Portal Cameroon
+# Optimized for Google AdSense and search engine crawler indexing
+
+User-agent: *
+Allow: /
+
+# Exclude private backend or administrative logs
+Disallow: /api/
+Disallow: /admin
+Disallow: /db_state.json
+
+# Provide path to sitemap
+Sitemap: https://madecc-group.com/sitemap.xml

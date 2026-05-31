@@ -1,0 +1,10 @@
+{
+  "name": "MADECC Group Cameroon",
+  "description": "Leading building construction and civil engineering group in Cameroon. High-quality structural construction, site baselining, architectural design, and project management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
