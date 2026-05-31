@@ -19,6 +19,31 @@
 # Single Page Application (SPA) routing fallback
 # Instructs Netlify to direct all deep relative path links back to main index framework
 [[redirects]]
+  # Netlify Configuration for MADECC Group Cameroon
+# Enables robust compilation of the Vite client-side single-page app framework to Netlify CDN.
+
+[build]
+  # Commands to clean, build and compile
+  command = "npm run build"
+  publish = "dist"
+
+# Set up global headers for web optimization, security and premium performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# Single Page Application (SPA) routing fallback
+# Instructs Netlify to direct all deep relative path links back to main index framework
+[[redirects]]
+  from = "/api/*" 
+  to = "/.netlify/functions/db" 
+  status = 200
+
   from = "/*"
   to = "/index.html"
   status = 200

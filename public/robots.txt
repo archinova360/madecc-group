@@ -10,4 +10,5 @@ Disallow: /admin
 Disallow: /db_state.json
 
 # Provide path to sitemap
-Sitemap: https://madecc-group.com/sitemap.xml
+Sitemap: madecc-constructionltd.online/sitemap.xml
+Sitemap: https://madecc-group.online/sitemap.xml

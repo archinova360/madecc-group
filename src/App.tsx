@@ -73,11 +73,31 @@ export default function App() {
   const [activePage, setActivePage] = useState("home");
   const [staffLoggedIn, setStaffLoggedIn] = useState<string | null>(null);
   const [dbState, setDbState] = useState<DatabaseState>({
-    commandKeys: {} as any,
+    commandKeys: {
+      [StaffRole.CEO]: "MADECC-KEY-CEO-99",
+      [StaffRole.PROJECT_MANAGER]: "MADECC-KEY-PM-88",
+      [StaffRole.WEB_CONTENT_EDITOR]: "MADECC-KEY-WCE-77",
+      [StaffRole.ACCOUNTANT]: "MADECC-KEY-ACCT-66",
+      [StaffRole.SECRETARY]: "MADECC-KEY-SEC-55",
+      [StaffRole.FINANCIAL_OFFICER]: "MADECC-KEY-FO-44",
+      [StaffRole.GENERAL_MANAGER]: "MADECC-KEY-GM-33",
+      [StaffRole.PROJECTS_EXECUTION_ENGINEER]: "MADECC-KEY-PEE-22",
+      [StaffRole.ARCHITECT]: "MADECC-KEY-ARCH-11",
+    },
     pagesContent: {
-      home: { heroTitle: "", heroSubtitle: "", aboutTeaser: "" },
-      about: { mission: "", vision: "", history: "" },
-      services: { generalDesc: "" }
+      home: {
+        heroTitle: "Constructing Sustainable Masterpieces in Cameroon",
+        heroSubtitle: "MADECC Group is Cameroon's chief building contractor. We shape skylines from Douala to Yaoundé with architectural excellence, compliance and budget fidelity.",
+        aboutTeaser: "Founded with local execution spirit and international quality protocols, MADECC Group (Maison de Construction et de Civil) is an integrated engineering-grade construction company fully registered in Cameroon.",
+      },
+      about: {
+        mission: "To construct climate-resilient and structurally superior edifices in Cameroon, aligning strictly with local regulatory models (ANOR) while employing regional talent and modern, safe workflows.",
+        vision: "To be the absolute benchmark of general construction in Central Africa, trusted for structural honesty, transparent bidding, and precision delivery.",
+        history: "Established in Cameroon, MADECC Group began as a small structural advisory group. Sensing the critical need for standard general contractors combining true execution checklists, reliable logistics, and legal compliance, we scaled into a complete Design-Build institution spanning multiple active sites.",
+      },
+      services: {
+        generalDesc: "MADECC Group offers multi-disciplinary design, site baselining, masonry structural casting, civil infrastructure, and financial billing audits for custom projects.",
+      },
     },
     blogs: [],
     projects: [],
